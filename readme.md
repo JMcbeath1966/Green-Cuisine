@@ -2,7 +2,7 @@
 
 ![mockup](app/wireframes/mockups.png)
 
-Looking for something sweet? You've come to the right place! [Green Cusine](xxxx) 
+Looking for something delicious for vegetarians or vegans? You've come to the right place! [Green Cusine](xxxx) 
 Vegetarian and Vegan recipes for 'Green' lovers! You'll find a variety of tasty dishes from other veggie fanatics, be able to create your own profile, add your own recipes and update these recipes if you need to!
 
 ---
