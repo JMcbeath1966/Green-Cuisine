@@ -44,9 +44,17 @@ Vegetarian and Vegan recipes for 'Green' lovers! You'll find a variety of tasty 
 
 ## UX
 
-This project is part of my [Code Institute](https://codeinstitute.net/) Full Stack Software Development studies, specifically the **Data Centric Development** module. The objective for this milestone project is to "*Create a web application that allows users to store and easily access cooking recipes*", using the **CRUD** operations of **C**reate, **R**ead, **U**pdate, and **D**elete for their recipes.
+This project is part of my [Code Institute](https://codeinstitute.net/) Full Stack Software Development course (Level 5 Diploma in Web Application Development), specifically the **Data Centric Development** module. The objective for this milestone project is to "*Create a web application that allows users to store and easily access cooking recipes*", using the **CRUD** operations of **C**reate, **R**ead, **U**pdate, and **D**elete for their recipes.
 
-I have decided to build a desserts-only project, since I personally bake quite regularly, and several of my own recipes are compiled in different places (kitchen cabinet, saved online, printed and shoved in a drawer, etc.). This was the perfect opportunity to finally have a single application to contain all of my own recipes in one source. A lot of people often ask me for specific recipes, so now I can quickly provide a single source for all of my recipes that can easily be shared or printed. It also allows others to store their own recipes securely.
+Although I'm not a vegetarian or vegan, I try to eat vegetable dishes whenever possible. I researched with friends and family who are either vegan or vegetarian to understand what their thoughts and needs for a website were.
+Whilst not an exclusive list there key requirements were:
+- Simple design with minimal images
+- Ability to add dishes with clear indication as to whether the recipe is vegan or vegetarian
+- Simple, quick register and login/logout process
+- Key elements of the recipe to be clearly marked and kept to 'need to know' only, e.g. images not a high priority
+
+I recognise that this is not extensive market research but it the discussions have, in conjunction with reviewing similar websites myself, has give me confidence that the key areas of their requirements are universal themes.
+
 
 ### User Stories
 
@@ -92,37 +100,29 @@ When it comes to dessert, I think of *sweet* and *sugary* treats, so this is why
 
 #### Color Scheme
 
-In keeping with the overall *sweet* theme, I have opted for a bright and colorful color scheme. These standard [Materialize Colors](https://materializecss.com/color.html) work quite well for my project.
+In keeping with the overall vegetable theme, I have opted for a green theme. These standard [Materialize Colors](https://materializecss.com/color.html) work quite well for my project.
 
-- ![#9C27B0](https://via.placeholder.com/15/9C27B0/9C27B0) `#9C27B0` (**purple** - *primary color*)
-- ![#F06292](https://via.placeholder.com/15/F06292/F06292) `#F06292` (**pink lighten-2** - *secondary color*)
-- ![#2196F3](https://via.placeholder.com/15/2196F3/2196F3) `#2196F3` (**blue** - *tertiary color*)
-- ![#4CAF50](https://via.placeholder.com/15/4CAF50/4CAF50) `#4CAF50` (**green** - *quaternary color*)
+- #558b2f light-green darken-3 (Primary)
+- #76ff03 light-green accent-3 (Secondary)
+- #ff1744 red accent-3 (Buttons)
+- #00bcd4 cyan (Buttons)
 
 #### Icons
 
 - [Materialize Icons](https://materializecss.com/icons.html)
-    - I've retained only a select few of the standard Materialize Icons, as these are built-in to some of their components. However, on mobile devices, clicking buttons like 'close' **X**, the browser thinks you're wanting to perform a search for that text, so I have replaced some of them with Font Awesome icons.
+    - I've retained only a select few of the standard Materialize Icons, as these are built-in to some of their components. 
 - [Font Awesome 5.8.1](https://fontawesome.com/)
-    - Although Materialize Icons have nearly 1,000 free-to-use icons, I prefer the look of Font Awesome's icons, and they have more to suit my specific needs for this project. They aren't displayed using *text*, but rather *classes*, so use on mobile devices isn't affected.
+    - I prefer the look of Font Awesome's icons, and they have more to suit my specific needs for this project.
 
 #### Typography
 
-- I have incorporated a number of [Google Fonts](https://fonts.google.com/) throughout the entire application. The font I have selected for all recipe names is called [Emilys Candy](https://fonts.google.com/specimen/Emilys+Candy), because it fits perfectly into the overall *cute* and *sweet* theme. Aside from the built-in Materialize fonts, I have imported these Google Fonts:
+- I have incorporated a number of [Google Fonts](https://fonts.google.com/) throughout the entire application. The font I have selected for all recipe names is called [xxxx](https://fonts.google.com/specimen/xxxx), because it fits perfectly as a clean, modern font. Aside from the built-in Materialize fonts, I have imported these Google Fonts:
     - [Abril Fatface](https://fonts.google.com/specimen/Abril+Fatface)
-    - [Amatic SC](https://fonts.google.com/specimen/Amatic+SC)
-    - [Cabin Sketch](https://fonts.google.com/specimen/Cabin+Sketch)
-    - [Emilys Candy](https://fonts.google.com/specimen/Emilys+Candy)
-    - [Fredericka the Great](https://fonts.google.com/specimen/Fredericka+the+Great)
-    - [Merienda One](https://fonts.google.com/specimen/Merienda+One)
-    - [Rye](https://fonts.google.com/specimen/Rye)
-    - [Special Elite](https://fonts.google.com/specimen/Special+Elite)
+
 
 ### Wireframes
 
-For my wireframes, I have used [Balsamiq Wireframes](https://balsamiq.com/) for a couple reasons:
-- Code Institute have provided all students with free access until the end of ~~2019~~ 2020.
-- The simplicity and ease of use. I actually found Balsamiq much easier and quicker to use than my former preferred wireframe program, Adobe XD.
+For my wireframes, I have used [Balsamiq Wireframes](https://balsamiq.com/) for a the reason that the simplicity and ease of use. I actually found Balsamiq much easier and quicker to use than Adobe XD.
 
 All of my wireframes for this project can be found [here](app/wireframes/) in the *wireframes* sub-directory.
 
@@ -132,7 +132,7 @@ All of my wireframes for this project can be found [here](app/wireframes/) in th
 
 ## Features
 
-I've added a few extra features to my project that weren't part of the requirements, because I felt they made the project 'complete' for better user interaction.
+I've added a few extra features to my project that weren't part of the requirements, specifically the login and registration functionality.
 
 ### Existing Features
 
@@ -151,22 +151,17 @@ I've added a few extra features to my project that weren't part of the requireme
 **Delete Account**
 - Users can delete their entire account, but a warning is provided to first validate their password, and advise that all of their own recipes will also be deleted, and their favorites removed.
 
-**View All Desserts**
-- On the *desserts* page, all recipes are initially displayed in an alphabetical order, with a standard 12-items per page using pagination.
+**View All Recipes**
+- On the *All Recipes* page, all recipes are initially displayed in an alphabetical order, with a standard 12-items per page using pagination.
 
-**Search Desserts**
-- If a user would like to search for something specific, whether it's a particular recipe, a certain dessert category, or for recipes that exclude certain allergens, then the Search button is perfect! There's also an option to sort the results by a number of different options, order them by either ascending or descending, and even limit the number of results that are displayed per page.
+**Search Recipes**
+- If a user would like to search for something specific, whether it's a particular recipe, then the Search button is perfect!
 
 **Add a Recipe**
-- [**C**RUD] Create or 'add' a new recipe. Defensive programming in place means users must adhere to minimal requirements when adding a new recipe. If a user doesn't have a photo to accompany their recipe, I have a built-in function that will automatically assign a cute placeholder image based on the type of dessert category they've selected.
+- [**C**RUD] Create or 'add' a new recipe. Defensive programming in place means users must adhere to minimal requirements when adding a new recipe. If a user doesn't have a photo to accompany their recipe, I have a built-in function that will automatically assign a cute placeholder image based on the type of dessert category they've selected. Do i include image url XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 **View a Recipe**
-- [C**R**UD] Read or 'review' recipes, either from the main page, or the user profile. From here, users also have additional options:
-    - Print the recipe.
-    - Share the recipe.
-    - Check ingredients / directions as 'complete' if making the recipe themselves.
-    - View two additional recipe suggestions.
-    - View a *conversion chart* either by temperature, volume, or weight.
+- [C**R**UD] Read or 'review' recipes, either from the main page, or the user profile.
 
 **Update a Recipe**
 - [CR**U**D] Update or 'edit' their own user recipes on this page.
@@ -174,32 +169,16 @@ I've added a few extra features to my project that weren't part of the requireme
 **Delete a Recipe**
 - [CRU**D**] Delete or 'remove' a user's own recipes. The *admin* account also has access to delete recipes, should they be inappropriate for example.
 
-**Save a Recipe to Favorites**
-- Users can save their own recipes, or recipes submitted by other users, directly into their profile for quicker access next time.
-
 **Remove a Recipe from Favorites**
 - If a user no longer likes a recipe, or simply wants to remove it from their favorites, a single click can remove a recipe.
 
 **Admin Superuser**
 - My ***'Admin'*** profile has several extra features, which currently include:
     - Edit / Delete any recipe from the database.
-    - View join-date / favs / recipes of all registered users. (added February 2020)
-    - Delete any registered user from the database. (added February 2020)
-    - Receive email for new recipes added or edited from database as backup in case database is lost. (added March 2020)
-    - View an interactive map of all visitors to the site. (added April 2020)
-    - View statistics of unique visitors by country, and total count. (added April 2020)
 
 ### Features Left to Implement
 
-In an ideal world, there are a couple items that I would've loved to have completed as well, but just didn't have the time or knowledge just yet as to how to implement these features.
-
-**Pagination Truncation** (added: 07APR2020)
-- ~~I have core functionality to properly paginate, but should my database start to expand with several dozen more recipes, then the current pagination will display every page number that exists. If pagination gets too long, ideally it should truncate the middle section of page numbers, so that only the first and last page numbers are displayed, leaving the center section as an ellipse (...) to not clog up too much space on the page.~~
-- **07APR2020**: The ellipse method wasn't showing the current page in view, so now I have pagination showing the current page number +/-2 pages on either end. You can now also go to *First* and *Last* page, instead of each page number one at a time.
-
-**Add / Delete individual Ingredients / Directions** (added: 04APR2020)
-- ~~Currently, I have a single add / delete button for the Ingredients and Directions sections of the recipe. Once a user clicks to add a new ingredient for example, then the previous line is cloned just below that. The same functionality for directions is in place. However, if a user needs to delete something, it will only delete the absolute last item in the list. This means that if the user needs to delete ingredient #2 for example, they cannot currently delete that line independently without going through all other items in the list that come after it. Eventually I would like to append an add / delete button for each item that's generated.~~
-- **04APR2020**: This capability is added now, so users can add/remove individual ingredients or directions chosen, not necessarily the last one from the list only.
+In an ideal world, there are a couple items that I would've loved to have completed as well, but just didn't have the time or knowledge just yet as to how to implement these features. xxxxxxxxxxxxxxxxxx
 
 ##### back to [top](#table-of-contents)
 
@@ -209,8 +188,8 @@ In an ideal world, there are a couple items that I would've loved to have comple
 
 - [VS Code](https://code.visualstudio.com/) - Used as my primary IDE for coding.
 - [GitHub](https://github.com/) - Used as remote storage of my code online.
+- [Gitpod] (https://www.gitpod.io/) - Developer platform for on-demand code.
 - [Photoshop CS6](https://www.adobe.com/Photoshop) - Used for editing images.
-- [TinyPNG](https://tinypng.com/) - Used to compress images for faster loading.
 
 ### Front-End Technologies
 
@@ -223,7 +202,7 @@ In an ideal world, there are a couple items that I would've loved to have comple
 
 ### Back-End Technologies
 
-- **Flask**
+- **Flask**.  UPDATE THIS AS CODING PROGRESSES - XXXXXXXXXXXX
     - [Flask 1.0.2](http://flask.pocoo.org/) - Used as a microframework.
     - [Flask Blueprints](http://flask.pocoo.org/docs/1.0/blueprints/) - Used to split the python code for routes.
     - [Flask Talisman](https://github.com/GoogleCloudPlatform/flask-talisman) - Used for security headers (HTTPS vs HTTP).
@@ -388,14 +367,7 @@ For testing compatibility, I created a testing matrix to test across multiple de
 
 ### Known Issues
 
-During development, I discovered two issues after committing to GitHub. For both of these bugs, I opened and *issue* on GitHub so I could come back and properly fix them.
 
-- **[Flaw when updating a recipe to database](https://github.com/TravelTimN/ci-milestone04-dcd/issues/1)**
-    - Found the bug, refactored my code, and pushed.
-- **[404 + 500 error handlers (fault)](https://github.com/TravelTimN/ci-milestone04-dcd/issues/8)**
-    - Helpful recommendation from my mentor to read about *Flask Blueprints + Error-Handlers*. Eventually I had to create a catch-all generic error handler.
-
-##### back to [top](#table-of-contents)
 
 ---
 
@@ -422,7 +394,7 @@ Next, there's a series of steps to take in order to proceed with local deploymen
     - `FLASK_ENV=development`
 - Install all requirements from the [requirements.txt](requirements.txt) file using this command:
     - `sudo -H pip3 -r requirements.txt`
-- Sign up for a free account on [MongoDB](https://www.mongodb.com) and create a new Database called **2BN-Desserts**. The *Collections* in that database should be as follows:
+- Sign up for a free account on [MongoDB](https://www.mongodb.com) and create a new Database called **Green-Cusine**. The *Collections* in that database should be as follows:
 
 **ALLERGENS**
 ```
