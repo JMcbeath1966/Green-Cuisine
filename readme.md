@@ -66,8 +66,7 @@ I recognise that this is not extensive market research but it the discussions ha
 - :white_check_mark: *view all recipes* as a **Guest**.
 - :white_check_mark: *filter recipes* by **dessert type**.
 - :white_check_mark: *filter recipes* by **allergen**.
-- :white_check_mark: *sort/order recipes* by **author, favorites, last updated, recipe name, total time, and views**.
-- :white_check_mark: **limit** the number of *recipes* to display, or see *all recipes*.
+- :white_check_mark: *sort/order recipes* by **recipe title, description, ingredients, cooking time, and cuisine**.
 - :white_check_mark: *create* my **own profile**.
 - :white_check_mark: *add* my **own recipes**.
 - :white_check_mark: *edit* my **own recipes**.
@@ -75,19 +74,10 @@ I recognise that this is not extensive market research but it the discussions ha
 - :white_check_mark: be able to **log out**.
 - :white_check_mark: be able to **change my password**.
 - :white_check_mark: be able to **delete my account**.
-- :white_check_mark: *save recipes* in **my favorites**.
-- :white_check_mark: *remove recipes* from **my favorites**.
-- :white_check_mark: *see instructions* on how to **add a recipe**.
-- :white_check_mark: **print** a *particular recipe*.
-- :white_check_mark: **share** a *particular recipe*.
-- :white_check_mark: *see* **recommended recipes** after *viewing a recipe*.
-- :white_check_mark: *see* the **total views** of *a recipe*.
-- :white_check_mark: *see* how many people **like** my *recipes*.
-- :white_check_mark: *see* a cooking/baking **conversion table**.
 
 ### Design
 
-When it comes to dessert, I think of *sweet* and *sugary* treats, so this is why I have designed my project using an overall *cute* and *sweet* concept, with cheerful avatars and bright colors.
+On the basis of user requirements being minimal on images and superflous information, I've created a clean, simple design with some icons and use of the color green as its appropriate to the sites theme of vegetables.
 
 #### Framework
 
