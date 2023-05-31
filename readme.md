@@ -93,9 +93,10 @@ On the basis of user requirements being minimal on images and superflous informa
 In keeping with the overall vegetable theme, I have opted for a green theme. These standard [Materialize Colors](https://materializecss.com/color.html) work quite well for my project.
 
 - #558b2f light-green darken-3 (Primary)
-- #76ff03 light-green accent-3 (Secondary)
-- #ff1744 red accent-3 (Buttons)
-- #00bcd4 cyan (Buttons)
+- #ccff90 light-green accent-1 (Secondary)
+- #76ff03 light-green accent-3 (Spare Color)
+- #ff1744 red accent-3 (Buttons-Prominent)
+- #00bcd4 cyan (Buttons-Updates)
 
 #### Icons
 
