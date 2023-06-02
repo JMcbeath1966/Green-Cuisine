@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Green Cuisine | Delicious Vegatarian and Vegan Recipes!</title>
+    <title>Green Cuisine | Delicious Vegetarian and Vegan Recipes!</title>
 </head>
 <body>
     <header>
@@ -24,7 +24,7 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fa-sharp fa-solid fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="#">Home TBC</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{{url_for('profile', username=session['user'])}}">Profile</a></li>
                 <li><a href="#">New Recipe</a></li>
                 <li><a href="#">Manage Recipes</a></li>
                 <li><a href="#">Log Out</a></li>
@@ -38,7 +38,7 @@
           <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align light-green-text darken-3">Green Cuisine</h4></li>   
             <li><a href="#">Home TBC</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="{{url_for('profile', username=session['user'])}}">Profile</a></li>
             <li><a href="#">New Recipe</a></li>
             <li><a href="#">Manage Recipes</a></li>
             <li><a href="#">Log Out</a></li>
