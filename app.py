@@ -21,16 +21,10 @@ mongo = PyMongo(app)
 
 # Define routes
 @app.route("/")
-@app.route("/get_recipes")
-def get_recipes():
-    recipes = list(mongo.db.recipes.find())  # Converts cursor object to list
-    return render_template("all_recipes.html", recipes=recipes)
-
-
 @app.route("/all_recipes", methods=["GET", "POST"])
 def all_recipes():
-    recipes = list(mongo.db.recipes.find())
-    return render_template("all_recipes.html")
+    recipes = list(mongo.db.recipes.find())  # Converts cursor object to list
+    return render_template("all_recipes.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -96,14 +90,13 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
     if session["user"]:
         return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
         recipe = {
@@ -111,7 +104,7 @@ def add_recipe():
             "recipe_description": request.form.get("recipe_description"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "cooking_instructions": request.form.get("cooking_instructions"),
-            "cooking_time": int(request.form.get("cooking_time")),
+            "cooking_time": request.form.get("cooking_time"),
             "recipe_type": request.form.get("recipe_type")
         }
         mongo.db.recipes.insert_one(recipe)
