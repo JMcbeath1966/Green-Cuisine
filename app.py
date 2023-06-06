@@ -27,6 +27,12 @@ def get_recipes():
     return render_template("all_recipes.html", recipes=recipes)
 
 
+@app.route("/all_recipes", methods=["GET", "POST"])
+def all_recipes():
+    recipes = list(mongo.db.recipes.find())
+    return render_template("all_recipes.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -99,6 +105,22 @@ def profile(username):
 
 @app.route("/add_recipe")
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "recipe_title": request.form.get("recipe_title"),
+            "recipe_description": request.form.get("recipe_description"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "cooking_instructions": request.form.get("cooking_instructions"),
+            "cooking_time": int(request.form.get("cooking_time")),
+            "recipe_type": request.form.get("recipe_type")
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe added successfully")
+
+        # Fetch all recipes again, including the newly added one
+        recipes = list(mongo.db.recipes.find())
+
+        return render_template("all_recipes.html", recipes=recipes)
     return render_template("add_recipe.html")
 
 
