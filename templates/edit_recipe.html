@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h3 class="center-align">Edit Recipe</h3>
+  <div class="row card-panel grey lighten-3">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="prefix"></i>
+          <input id="recipe_title" name="recipe_title" minlength="5" maxlength="50" type="text" class="validate" value="{{ recipe.recipe_title }}">
+          <label for="recipe_title">Recipe Title</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="prefix"></i>
+          <input id="recipe_description" name="recipe_description" minlength="5" maxlength="100" type="text"
+            class="validate" value="{{ recipe.recipe_description }}">
+          <label for="recipe_description">Recipe Description</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="prefix"></i>
+          <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate" value="{{ recipe.recipe_ingredients }}">
+          <label for="recipe_ingredients">Ingredients</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="prefix"></i>
+          <input id="cooking_instructions" name="cooking_instructions" type="text" class="validate" value="{{ recipe.cooking_instructions }}">
+          <label for="cooking_instructions">Cooking Instructions</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="prefix"></i>
+          <input id="cooking_time" minlength="5" maxlength="30" name="cooking_time" type="text" class="validate" value="{{ recipe.cooking_time }}">
+          <label for="cooking_time">Cooking Time</label>
+        </div>
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your recipe type (Vegan or
+          Vegetarian)</a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!">Vegetarian</a></li>
+          <li><a href="#!">Vegan</a></li>
+        </ul>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col s12 center-align">
+      <button type="submit" class="btn-large text-shadow">
+      Edit Task <i class="fas fa-edit right"></i>
+      </button>
+    </div>
+  </div>
+  </form>
+</div>
+
+{% endblock %}
