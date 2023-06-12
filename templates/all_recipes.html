@@ -7,8 +7,14 @@
     {% for recipe in recipes %}
     <li>
       <div class="collapsible-header white-text text-shadow light-green darken-3">
-        <i class="fas fa-caret-down"></i>
-        <strong>{{ recipe.recipe_title }}</strong> : {{ recipe.recipe_description }}
+        <div class="col s3">
+          <i class="fas fa-caret-down"></i>
+          <a class="waves-effect waves-light btn-small">Done</a>
+          <a class="waves-effect waves-light btn-small">Edit</a>
+        </div>
+        <div class="col s9">
+        </div>
+        <strong">{{ recipe.recipe_title }}</strong> : {{ recipe.recipe_description }}
       </div>
       <div class="collapsible-body light-green accent-1">
         <i class=""></i>
@@ -36,5 +42,3 @@
 </div>
 
 {% endblock %}
-
-    

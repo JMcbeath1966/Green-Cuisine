@@ -39,3 +39,11 @@ a {
   color: #ff1744;
   text-decoration: none;
 }
+
+.btn-small {
+  margin: 7px;
+}
+
+.col strong {
+  margin: 7px;
+}
