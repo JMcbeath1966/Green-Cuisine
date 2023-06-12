@@ -47,3 +47,9 @@ a {
 .col strong {
   margin: 7px;
 }
+
+.btn-large {
+  margin: 9px;
+  justify-content: center;
+  align-items: center;
+}
