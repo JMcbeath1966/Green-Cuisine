@@ -21,6 +21,10 @@ mongo = PyMongo(app)
 
 # Define routes
 @app.route("/")
+def home():
+    return render_template('home.html')
+
+
 @app.route("/all_recipes", methods=["GET", "POST"])
 def all_recipes():
     recipes = list(mongo.db.recipes.find())  # Converts cursor object to list
