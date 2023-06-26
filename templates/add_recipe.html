@@ -31,10 +31,9 @@
           <input id="cooking_time" minlength="5" maxlength="30" name="cooking_time" type="text" class="validate">
           <label for="cooking_time">Cooking Time</label>
         </div>
-        <!-- Dropdown replaced with a select element -->
         <div class="input-field col s12">
           <select id="recipe_type" name="recipe_type">
-            <option value="" disabled selected>Choose your recipe type</option>
+            <option value="All" selected>Choose your recipe type</option>
             <option value="Vegetarian">Vegetarian</option>
             <option value="Vegan">Vegan</option>
           </select>
@@ -49,5 +48,13 @@
   </div>
   </form>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });
+</script>
+
 
 {% endblock %}

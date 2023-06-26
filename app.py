@@ -28,14 +28,40 @@ def home():
 
 @app.route("/all_recipes", methods=["GET", "POST"])
 def all_recipes():
-    recipes = list(mongo.db.recipes.find())  # Converts cursor object to list
+    if request.method == "POST":
+        recipe_type = request.form.get("recipe_type")
+        if recipe_type == "All":
+            recipes = list(mongo.db.recipes.find())
+        else:
+            recipes = list(mongo.db.recipes.find({"recipe_type": recipe_type}))
+    else:
+        recipes = list(mongo.db.recipes.find())
+
+    return render_template("all_recipes.html", recipes=recipes)
+
+
+@app.route("/submit_recipe", methods=["GET", "POST"])
+def submit_recipe():
+    if request.method == "POST":
+        recipe_type = request.form.get("recipe_type")
+        if recipe_type == "All Recipe Types":
+            recipes = list(mongo.db.recipes.find())
+        else:
+            recipes = list(mongo.db.recipes.find({"recipe_type": recipe_type}))
+    else:
+        recipes = list(mongo.db.recipes.find())
+
     return render_template("all_recipes.html", recipes=recipes)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    recipe_type = request.form.get("recipe_type")
+    if recipe_type == "All":
+        recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    else:
+        recipes = list(mongo.db.recipes.find({"$text": {"$search": query}, "recipe_type": recipe_type}))
     return render_template("all_recipes.html", recipes=recipes)
 
 
@@ -111,6 +137,9 @@ def profile(username):
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        recipe_type = request.form.get("recipe_type")
+        if not recipe_type:
+            recipe_type = 'All'
         recipe = {
             "recipe_title": request.form.get("recipe_title"),
             "recipe_description": request.form.get("recipe_description"),
@@ -120,11 +149,10 @@ def add_recipe():
             "recipe_type": request.form.get("recipe_type")
         }
         mongo.db.recipes.insert_one(recipe)
+        print(request.form)
         flash("Recipe added successfully")
-
         # Fetch all recipes again, including the newly added one
         recipes = list(mongo.db.recipes.find())
-
         return render_template("all_recipes.html", recipes=recipes)
     return render_template("add_recipe.html")
 

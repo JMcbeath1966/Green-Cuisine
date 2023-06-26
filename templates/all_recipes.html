@@ -18,59 +18,70 @@
           </button>
         </div>
       </div>
-      <div class="row center-align">
-        <div class="input-field col s12">
-          <select name="recipe_type">
-            <option value="" selected>All Recipe Types</option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="Vegan">Vegan</option>
-          </select>
-          <label>Filter by Recipe Type</label>
-        </div>
-      </div>
     </form>
   </div>
+  <div class="row card-panel light-green accent-1">
+    <form action="{{ url_for('submit_recipe') }}" method="post" class="col s12">
+    <div class="row center-align">
+      <div class="input-field col s12">
+        <select name="recipe_type">
+          <option value="" selected>Choose Recipe Type and then Submit</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+        </select>
+        <label>Sort by Recipe Type</label>
+      </div>
+      <div class="col s12 m4">
+        <button type="submit" class="light-green darken-3 btn text-shadow">
+          <i class=""></i> Submit Recipe Type
+        </button>
+      </div>
+    </div>
+    </form>
+    </div>
 
-  {% if recipes|length > 0 %}
+    {% if recipes|length > 0 %}
     <ul class="collapsible">
       {% for recipe in recipes %}
-        <li>
-          <div class="collapsible-header white-text text-shadow light-green darken-3">
-            <div class="col s3">
-              <i class="fas fa-caret-down"></i>
-              {% if session.users|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Delete</a>
-              {% endif %}
-            </div>
-            <div class="col s9"></div>
-            <strong>{{ recipe.recipe_title }}</strong> : {{ recipe.recipe_description }}
+      <li>
+        <div class="collapsible-header white-text text-shadow light-green darken-3">
+          <div class="col s3">
+            <i class="fas fa-caret-down"></i>
+            {% if session.users|lower == recipe.created_by|lower %}
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+              class="waves-effect waves-light btn-small">Edit</a>
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+              class="waves-effect waves-light btn-small">Delete</a>
+            {% endif %}
           </div>
-          <div class="collapsible-body light-green accent-1">
-            <i class=""></i>
-            <strong>{{ recipe.ingredients_title }}</strong> : {{ recipe.recipe_ingredients }}
-          </div>
-          <div class="collapsible-body light-green accent-1">
-            <i class=""></i>
-            <strong>{{ recipe.instruction_title }}</strong> : {{ recipe.cooking_instructions  }}
-          </div>
-          <div class="collapsible-body light-green accent-1">
-            <i class=""></i>
-            <strong>{{ recipe.time_title }}</strong> : {{ recipe.cooking_time }}
-          </div>
-        </li>
+          <div class="col s9"></div>
+          <strong>{{ recipe.recipe_title }}</strong> : {{ recipe.recipe_description }}
+        </div>
+        <div class="collapsible-body light-green accent-1">
+          <i class=""></i>
+          <strong>{{ recipe.ingredients_title }}</strong> : {{ recipe.recipe_ingredients }}
+        </div>
+        <div class="collapsible-body light-green accent-1">
+          <i class=""></i>
+          <strong>{{ recipe.instruction_title }}</strong> : {{ recipe.cooking_instructions  }}
+        </div>
+        <div class="collapsible-body light-green accent-1">
+          <i class=""></i>
+          <strong>{{ recipe.time_title }}</strong> : {{ recipe.cooking_time }}
+        </div>
+      </li>
       {% endfor %}
     </ul>
-  {% else %}
+    {% else %}
     <h3 class="light-red-text text-darken-4 center-align">No Results Found</h3>
-  {% endif %}
-</div>
+    {% endif %}
+  </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, {});
-  });
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems, {});
+    });
+  </script>
 
-{% endblock %}
+  {% endblock %}
