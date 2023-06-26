@@ -1,68 +1,76 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="black-text text-darken-4 center-align">All Tasks</h3>
+<h3 class="center-align">All Recipes</h3>
 
 <div class="container">
-    <div class="row card-panel light-green accent-1">
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Tasks</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('all_recipes') }}" class="red btn text-shadow">Reset</a>
-                    <button type="submit" class="light-blue darken-1 btn text-shadow">
-                        <i class="fas fa-search left"></i> Search
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-  {% if recipes|length > 0 %}
-  <ul class="collapsible">
-    {% for recipe in recipes %}
-    <li>
-      <div class="collapsible-header white-text text-shadow light-green darken-3">
-        <div class="col s3">
-          <i class="fas fa-caret-down"></i>
-          {% if session.users|lower == recipe.created_by|lower %}
-          <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-          <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Delete</a>
-          {% endif %}
+  <div class="row card-panel light-green accent-1">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+      <div class="row valign-wrapper center-align">
+        <div class="input-field col s12 m8">
+          <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+          <input type="text" name="query" id="query" minlength="3" class="validate" required>
+          <label for="query">Search Recipes</label>
         </div>
-        <div class="col s9">
+        <div class="col s12 m4">
+          <button type="submit" class="light-blue darken-1 btn text-shadow">
+            <i class="fas fa-search left"></i> Search
+          </button>
         </div>
-        <strong">{{ recipe.recipe_title }}</strong> : {{ recipe.recipe_description }}
       </div>
-      <div class="collapsible-body light-green accent-1">
-        <i class=""></i>
-        <strong>{{ recipe.ingredients_title }}</strong> : {{ recipe.recipe_ingredients }}
+      <div class="row center-align">
+        <div class="input-field col s12">
+          <select name="recipe_type">
+            <option value="" selected>All Recipe Types</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+          </select>
+          <label>Filter by Recipe Type</label>
+        </div>
       </div>
-      <div class="collapsible-body light-green accent-1">
-        <i class=""></i>
-        <strong>{{ recipe.instruction_title }}</strong> : {{ recipe.cooking_instructions  }}
-      </div>
-      <div class="collapsible-body light-green accent-1">
-        <i class=""></i>
-        <strong>{{ recipe.time_title }}</strong> : {{ recipe.cooking_time }}
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <h3 class="light-red-text text-darken-4 center-align">No Result Found</h3>
-  {% endif %}
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your recipe type (Vegan or Vegetarian)</a>
+    </form>
+  </div>
 
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">Vegetarian</a></li>
-    <li><a href="#!">Vegan</a></li>
-  </ul>
+  {% if recipes|length > 0 %}
+    <ul class="collapsible">
+      {% for recipe in recipes %}
+        <li>
+          <div class="collapsible-header white-text text-shadow light-green darken-3">
+            <div class="col s3">
+              <i class="fas fa-caret-down"></i>
+              {% if session.users|lower == recipe.created_by|lower %}
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Delete</a>
+              {% endif %}
+            </div>
+            <div class="col s9"></div>
+            <strong>{{ recipe.recipe_title }}</strong> : {{ recipe.recipe_description }}
+          </div>
+          <div class="collapsible-body light-green accent-1">
+            <i class=""></i>
+            <strong>{{ recipe.ingredients_title }}</strong> : {{ recipe.recipe_ingredients }}
+          </div>
+          <div class="collapsible-body light-green accent-1">
+            <i class=""></i>
+            <strong>{{ recipe.instruction_title }}</strong> : {{ recipe.cooking_instructions  }}
+          </div>
+          <div class="collapsible-body light-green accent-1">
+            <i class=""></i>
+            <strong>{{ recipe.time_title }}</strong> : {{ recipe.cooking_time }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h3 class="light-red-text text-darken-4 center-align">No Results Found</h3>
+  {% endif %}
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });
+</script>
 
 {% endblock %}
