@@ -30,7 +30,7 @@ def home():
 def all_recipes():
     if request.method == "POST":
         recipe_type = request.form.get("recipe_type")
-        if recipe_type == "All":
+        if recipe_type == "all":
             recipes = list(mongo.db.recipes.find())
         else:
             recipes = list(mongo.db.recipes.find({"recipe_type": recipe_type}))
@@ -44,7 +44,8 @@ def all_recipes():
 def submit_recipe():
     if request.method == "POST":
         recipe_type = request.form.get("recipe_type")
-        if recipe_type == "All Recipe Types":
+        print('recipe_type: ', recipe_type)
+        if recipe_type == "all Recipe Types":
             recipes = list(mongo.db.recipes.find())
         else:
             recipes = list(mongo.db.recipes.find({"recipe_type": recipe_type}))
@@ -58,10 +59,13 @@ def submit_recipe():
 def search():
     query = request.form.get("query")
     recipe_type = request.form.get("recipe_type")
-    if recipe_type == "All":
+    if recipe_type == "all":
         recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     else:
-        recipes = list(mongo.db.recipes.find({"$text": {"$search": query}, "recipe_type": recipe_type}))
+        recipes = list
+        (mongo.db.recipes.find({
+            "$text": {"$search": query},
+            "recipe_type": recipe_type}))
     return render_template("all_recipes.html", recipes=recipes)
 
 
