@@ -54,7 +54,7 @@
               class="waves-effect waves-light btn-small">Delete</a>
             {% endif %}
           </div>
-          <div class="col s9">
+          <div class="col s9"></div>
           <strong>{{ recipe.recipe_title }}</strong> : {{ recipe.recipe_description }}
         </div>
         <div class="collapsible-body light-green accent-1">
@@ -68,7 +68,6 @@
         <div class="collapsible-body light-green accent-1">
           <i class="fa-solid fa-timer prefix"></i>
           <strong>{{ recipe.time_title }}</strong> : {{ recipe.cooking_time }}
-        </div>
         </div>
       </li>
       {% endfor %}
