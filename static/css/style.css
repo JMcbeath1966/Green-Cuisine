@@ -69,3 +69,6 @@ a {
   align-items: center;
 }
 
+.card {
+  height: auto !important;
+}
