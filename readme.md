@@ -233,31 +233,23 @@ With the Search function, the user has the option to sort, order, and limit the 
     - Sorting by *Author* or *Recipe Name* works accordingly:
         - ascending (alphabetical A-Z)
         - descending (alphabetical Z-A)
-    - Sorting by *Last Edited* works accordingly:
-        - ascending (oldest to newest)
-        - descending (newest to oldest)
-    - Sorting by *Total Time* works accordingly:
-        - ascending (shortest to longest)
-        - descending (longest to shortest)
-
-
 ### Validators
 
 **HTML**
-- [W3C HTML Validator](https://validator.w3.org) - I removed all Jinja coding from the html files and tested on that basis. The errors seen from the W3C checker all relate to erros caused by removing the Jinja code, e.g. expecting to see a doctype first, the head element is missing - all related to html elements that do not appear in any of the files apart from the base.html. Otherwise there were no errors in the html. Results [here]()
+- [W3C HTML Validator](https://validator.w3.org) - I removed all Jinja coding from the html files and tested on that basis. The errors seen from the W3C checker all relate to erros caused by removing the Jinja code, e.g. expecting to see a doctype first, the head element is missing - all related to html elements that do not appear in any of the files apart from the base.html. Otherwise there were no errors in the html. Results [here](https://github.com/JMcbeath1966/Green-Cuisine/tree/main/static/images/html-css-test-results)
 
 **CSS**
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - 
-- CSS code passed first time with no errors.Results [here]()
+- CSS code passed first time with no errors.Results [here](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/css-stylesheet-testpass.png)
 
 **JavaScript**
 - [JShint](https://jshint.com/)
-- JShint code passed first time, with 2 warnings.Results [here]()
+- JShint code passed first time, with 2 warnings.Results [here](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/jshint-test.png)
    
 
 **Python**
 - [PEP8 Online](http://pep8online.com/)
-    - All `.py` files are completely PEP8 compliant! Results [here]()
+    - pycodestyle was used in the CLI to test compliance to pep8 and the file test 'threw' no errors
 
 ### Compatibility
 
@@ -271,15 +263,11 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 
 For testing compatibility, I created a testing matrix to test across multiple devices and browsers. The test matrix can be found [here](app/testing/test-matrix.png). A brief overview:
 
-![testing-matrix](app/testing/test-matrix.png)
 
 ### Known Issues
 
+None
 
-
----
-
-## Deployment
 
 ### Local Deployment
 
@@ -304,58 +292,28 @@ Next, there's a series of steps to take in order to proceed with local deploymen
     - `sudo -H pip3 -r requirements.txt`
 - Sign up for a free account on [MongoDB](https://www.mongodb.com) and create a new Database called **Green-Cusine**. The *Collections* in that database should be as follows:
 
-**ALLERGENS**
+**CATEGORIES**
 ```
 _id: <ObjectId>
-allergen_name: <array>
-```
-
-**DESSERTS**
-```
-_id: <ObjectId>
-dessert_type: <array>
-```
-
-**MEASUREMENTS**
-```
-_id: <ObjectId>
-measurement_unit: <array>
+recipe_type: <array>
 ```
 
 **RECIPES**
 ```
 _id: <ObjectId>
-recipe_name: <string>
-recipe_slug: <string>
-description: <string>
-dessert_type: <string>
-ingredient_amount: <array>
-ingredient_measurement: <array>
-ingredient_name: <array>
-directions: <array>
-total_hrs: <string>
-total_mins: <string>
-total_time: <int32>
-allergens: <array>
-img_src: <string>
-author: <ObjectId>
-date_added: <string>
-date_updated: <string>
-last_edit: <int32>
-views: <int32>
-user_favs: <int32>
+recipe_title: <string>
+recipe_description: <string>
+recipe_ingredients: <string>
+cooking_instructions: <string>
+cooking_time: <string>
+recipe_type: <string>
 ```
 
-**USERS**
+**USER**
 ```
-_id: <ObjectId>
-username: <string>
-username_lower: <string>
-user_password: <string>
-user_avatar: <string>
-user_recipes: <array>
-user_favs: <array>
+username:  <string>
 ```
+
 
 - You should now be able to launch your app using the following command in your terminal:
     - `flask run`
@@ -394,57 +352,10 @@ I would recommend to create a secondary Google account for this purpose, instead
 
 ##### back to [top](#table-of-contents)
 
----
-
-## Credits
-
-### Content
-
-- [*"How to Write a Git Commit Message"*](https://chris.beams.io/posts/git-commit/) by **Chris Beams** (*as recommended by Code Institute assessors on previous projects*)
-- Converting **Cups** to **Grams** : [ErrensKitchen](https://www.errenskitchen.com/cooking-conversions/cups-to-grams-and-oz/)
-
-### Media
-
-Sources of the images used on this site:
-
-- **favicon** : [Clipart-Library](http://clipart-library.com/kawaii-cookie-cliparts.html)
-- **recipe placeholder image** : [Pixabay](https://pixabay.com/photos/waffles-waffles-bake-ingredients-2190961/)
-- **profile avatars** : [123rf](https://www.123rf.com/photo_40610865_stock-vector-cute-kawaii-dessert-cake-macaroon-ice-cream-icons.html)
-- **background image** : [vecteezy](https://www.vecteezy.com/vector-art/113872-polka-dots-vector-pattern)
-- **error 404 | 500 images** :
-    - [freepik - 0](https://www.freepik.com/free-vector/kawaii-food-collection_4237785.htm)
-    - [freepik - 4](https://www.freepik.com/premium-vector/number-four-kawaii-comic-character_2632836.htm)
-    - [freepik - 5](https://www.freepik.com/premium-vector/number-five-kawaii-comic-character_2632838.htm)
-- **mockup image in README** : [techsini](https://techsini.com/multi-mockup/)
-
-### Code
-
-- Suggested **.gitignore** files from [GitHub/gitignore](https://github.com/github/gitignore)
-- **Custom Toast** on *page load* (instead of **Materialize Toasts** with an *onclick* event) for my Flask Flash Messages : [StackOverflow](https://stackoverflow.com/questions/43345678/how-to-display-the-snack-bar-on-page-load)
-- **Custom list item** attributes (instead of standard bullet points) for my recipe *Directions* : [CSS Tricks](https://css-tricks.com/custom-list-number-styling/)
-- **Auto-Open '.card-reveal'** on *:hover* : [StackOverflow](https://stackoverflow.com/questions/36290110/open-card-reveal-content-by-hover-the-activator-in-materializecss)
-- **Print** only certain elements : [StackOverflow](https://stackoverflow.com/a/2618980)
-- **Copy to Clipboard** : [w3schools](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
-- **Enforce Validation on Materialize Dropdowns** : [StackOverflow](https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown)
-- **Flask Blueprints walkthrough** : [Corey Schafer on YouTube](https://youtu.be/Wfx4YBzg16s)
-- **Sending Emails using Python** :
-    - [freeCodeCamp](https://www.freecodecamp.org/news/send-emails-using-code-4fcea9df63f/)
-    - [StackOverflow](https://stackoverflow.com/a/17596848)
-    - [StackOverflow](https://stackoverflow.com/q/16512592)
-    - [StackOverflow](https://stackoverflow.com/a/8519646)
-- **Find Client IP Address** :
-    - [StackOverflow](https://stackoverflow.com/a/35123097)
-    - [IP API](https://ipapi.co/json/)
-    - [IP Info](https://ipinfo.io/json)
-- **Get Proper IP Address, not Heroku IP** : [StackOverflow](https://stackoverflow.com/a/37061471)
-
+## Code
+Code Insitute tutorials for the Milestone 3 project. 
+Chat GPT was used to support learning and to test code, but no code was direclty copied
 ### Acknowledgements
-
-- [Ignatius Ukwuoma](https://github.com/ignatiusukwuoma)
-    - My Code Institute mentor.
-- [Chris Quinn](https://github.com/10xOXR)
-    - My accountability partner on all projects.
-- [Sean Murphy](https://github.com/nazarja)
-    - For helping me have a euphoric epiphany on how things work with the back-end.
+ Thanks for the support of the Code Institute tutor support, my indvidual tutor (Rachel Furlong) and my mentor (Jubrill Akolade)
 
 ##### back to [top](#table-of-contents)
