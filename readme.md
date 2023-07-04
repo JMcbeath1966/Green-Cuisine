@@ -113,7 +113,7 @@ In keeping with the overall vegetable theme, I have opted for a green theme. The
 
 For my wireframes, I have used [Balsamiq Wireframes](https://balsamiq.com/) for a the reason that the simplicity and ease of use. I actually found Balsamiq much easier and quicker to use than Adobe XD.
 
-All of my wireframes for this project can be found ![here](static/images/wireframes/green-cuisine-wireframe.pdf).
+All of my wireframes for this project can be found ![here](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/wireframes/green-cuisine-wireframe.pdf).
 
 ##### back to [top](#table-of-contents)
 
