@@ -1,6 +1,6 @@
 # [Green Cusinse](https://green-cuisine.herokuapp.com/)
 
-[mockup]()
+- Mockup Design ![Here](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/mock-up-design/all-devices-white.png)
 
 Looking for something delicious for vegetarians or vegans? You've come to the right place! [Green Cusine](https://green-cuisine.herokuapp.com/) 
 Vegetarian and Vegan recipes for 'Green' lovers! You'll find a variety of tasty dishes from other veggie fanatics, be able to create your own profile, add your own recipes and update these recipes if you need to!
