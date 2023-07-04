@@ -244,19 +244,20 @@ With the Search function, the user has the option to sort, order, and limit the 
 ### Validators
 
 **HTML**
-- [W3C HTML Validator](https://validator.w3.org) - I removed all Jinja coding from the html files and tested on that basis. The errors seen from the W3C checker all relate to erros caused by removing the Jinja code, e.g. expecting to see a doctype first, the head element is missing - all related to html elements that do not appear in any of the files apart from the base.html. Otherwise there were no errors in the html.
+- [W3C HTML Validator](https://validator.w3.org) - I removed all Jinja coding from the html files and tested on that basis. The errors seen from the W3C checker all relate to erros caused by removing the Jinja code, e.g. expecting to see a doctype first, the head element is missing - all related to html elements that do not appear in any of the files apart from the base.html. Otherwise there were no errors in the html. Results [here]()
 
 **CSS**
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - 
-- CSS code passed first time with no errors
+- CSS code passed first time with no errors.Results [here]()
 
 **JavaScript**
 - [JShint](https://jshint.com/)
+- JShint code passed first time, with 2 warnings.Results [here]()
    
 
 **Python**
 - [PEP8 Online](http://pep8online.com/)
-    - All `.py` files are completely PEP8 compliant!
+    - All `.py` files are completely PEP8 compliant! Results [here]()
 
 ### Compatibility
 
