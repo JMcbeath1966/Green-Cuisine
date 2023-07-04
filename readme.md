@@ -102,19 +102,18 @@ In keeping with the overall vegetable theme, I have opted for a green theme. The
 - [Materialize Icons](https://materializecss.com/icons.html)
     - I've retained only a select few of the standard Materialize Icons, as these are built-in to some of their components. 
 - [Font Awesome 5.8.1](https://fontawesome.com/)
-    - I prefer the look of Font Awesome's icons, and they have more to suit my specific needs for this project.
+    - I prefer the look of Font Awesome's icons, and they have more to suit my specific needs for this project. I have used a kit to use the newest icons available (version 6.4.0)
 
 #### Typography
 
-- I have incorporated a number of [Google Fonts](https://fonts.google.com/) throughout the entire application. The font I have selected for all recipe names is called [xxxx](https://fonts.google.com/specimen/xxxx), because it fits perfectly as a clean, modern font. Aside from the built-in Materialize fonts, I have imported these Google Fonts:
-    - [Abril Fatface](https://fonts.google.com/specimen/Abril+Fatface)
+- I have incorporated [Google Fonts](https://fonts.google.com/) throughout the entire application. The font I have selected for all recipe names is called [Roboto](https://fonts.google.com/specimen/Roboto), because it fits perfectly as a clean, modern font.
 
 
 ### Wireframes
 
 For my wireframes, I have used [Balsamiq Wireframes](https://balsamiq.com/) for a the reason that the simplicity and ease of use. I actually found Balsamiq much easier and quicker to use than Adobe XD.
 
-All of my wireframes for this project can be found [here](app/wireframes/) in the *wireframes* sub-directory.
+All of my wireframes for this project can be found [here]!(https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/wireframes/green-cuisine-wireframe.pdf).
 
 ##### back to [top](#table-of-contents)
 
