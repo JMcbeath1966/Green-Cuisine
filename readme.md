@@ -113,15 +113,12 @@ In keeping with the overall vegetable theme, I have opted for a green theme. The
 
 For my wireframes, I have used [Balsamiq Wireframes](https://balsamiq.com/) for a the reason that the simplicity and ease of use. I actually found Balsamiq much easier and quicker to use than Adobe XD.
 
-All of my wireframes for this project can be found ![here](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/wireframes/green-cuisine-wireframe.pdf).
+ - All of my wireframes for this project can be found [here](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/wireframes/green-cuisine-wireframe.pdf).
+
 
 ##### back to [top](#table-of-contents)
 
 ---
-
-## Features
-
-I've added a few extra features to my project that weren't part of the requirements, specifically the login and registration functionality.
 
 ### Existing Features
 
@@ -138,16 +135,16 @@ I've added a few extra features to my project that weren't part of the requireme
 - Users can easily log out of their account with the click of a button.
 
 **Delete Account**
-- Users can delete their entire account, but a warning is provided to first validate their password, and advise that all of their own recipes will also be deleted, and their favorites removed.
+- Users can delete their entire account
 
 **View All Recipes**
-- On the *All Recipes* page, all recipes are initially displayed in an alphabetical order, with a standard 12-items per page using pagination.
+- On the *All Recipes* page, all recipes are initially displayed in an alphabetical order, using an accordion dropdown.
 
 **Search Recipes**
-- If a user would like to search for something specific, whether it's a particular recipe, then the Search button is perfect!
+- If a user would like to search for something specific, whether it's a particular recipe, then the search button is perfect!
 
 **Add a Recipe**
-- [**C**RUD] Create or 'add' a new recipe. Defensive programming in place means users must adhere to minimal requirements when adding a new recipe. If a user doesn't have a photo to accompany their recipe, I have a built-in function that will automatically assign a cute placeholder image based on the type of dessert category they've selected. Do i include image url XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+- [**C**RUD] Create or 'add' a new recipe. Defensive programming in place means users must adhere to minimal requirements when adding a new recipe. 
 
 **View a Recipe**
 - [C**R**UD] Read or 'review' recipes, either from the main page, or the user profile.
@@ -156,7 +153,7 @@ I've added a few extra features to my project that weren't part of the requireme
 - [CR**U**D] Update or 'edit' their own user recipes on this page.
 
 **Delete a Recipe**
-- [CRU**D**] Delete or 'remove' a user's own recipes. The *admin* account also has access to delete recipes, should they be inappropriate for example.
+- [CRU**D**] Delete or 'remove' a user's own recipes.
 
 **Remove a Recipe from Favorites**
 - If a user no longer likes a recipe, or simply wants to remove it from their favorites, a single click can remove a recipe.
@@ -167,7 +164,10 @@ I've added a few extra features to my project that weren't part of the requireme
 
 ### Features Left to Implement
 
-In an ideal world, there are a couple items that I would've loved to have completed as well, but just didn't have the time or knowledge just yet as to how to implement these features. xxxxxxxxxxxxxxxxxx
+**Admin Superuser**
+
+-  I would like a  ***'Admin'*** profile has several extra features, which currently include:
+    - Edit / Delete any recipe from the database.
 
 ##### back to [top](#table-of-contents)
 
@@ -178,7 +178,6 @@ In an ideal world, there are a couple items that I would've loved to have comple
 - [VS Code](https://code.visualstudio.com/) - Used as my primary IDE for coding.
 - [GitHub](https://github.com/) - Used as remote storage of my code online.
 - [Gitpod] (https://www.gitpod.io/) - Developer platform for on-demand code.
-- [Photoshop CS6](https://www.adobe.com/Photoshop) - Used for editing images.
 
 ### Front-End Technologies
 
@@ -186,15 +185,12 @@ In an ideal world, there are a couple items that I would've loved to have comple
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
 - [jQuery 3.4.0](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
 - [Materialize 1.0.0](https://materializecss.com/) - Used as the overall design framework.
-- [LeafletJS](https://leafletjs.com/): Used for Admin visitor tracking purposes.
 
 
 ### Back-End Technologies
 
-- **Flask**.  UPDATE THIS AS CODING PROGRESSES - XXXXXXXXXXXX
-    - [Flask 1.0.2](http://flask.pocoo.org/) - Used as a microframework.
-    - [Flask Blueprints](http://flask.pocoo.org/docs/1.0/blueprints/) - Used to split the python code for routes.
-    - [Flask Talisman](https://github.com/GoogleCloudPlatform/flask-talisman) - Used for security headers (HTTPS vs HTTP).
+- **Flask**. 
+    - [Flask 2.3.2](http://flask.pocoo.org/) - Used as a microframework.
     - [Jinja 2.10](http://jinja.pocoo.org/docs/2.10/) - Used for templating with Flask.
     - [Werkzeug 0.16](https://werkzeug.palletsprojects.com/en/0.16.x/) - Used for password hashing, authentication, and authorization.
 - **Heroku**
@@ -203,8 +199,10 @@ In an ideal world, there are a couple items that I would've loved to have comple
     - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
     - [MongoDB Atlas](https://www.mongodb.com/) - Used to store my database in the 'cloud'.
     - [PyMongo 3.8.0](https://api.mongodb.com/python/current/) - Used as the Python API for MongoDB.
-    - [Python Slugify 3.0.2](https://pypi.org/project/python-slugify/) - Used to generate user-friendly URLs.
-    - [Python dotenv](https://github.com/theskumar/python-dotenv) - Used to get/set values in `.env` file.
+    - [Itsdangerous 2.1.2](https://itsdangerous.palletsprojects.com/) - The itsdangerous library provides various ways to work with JSON Web Signatures (JWS), which are a way of signing a data structure in a way that cannot be easily tampered with.
+    - [click==8.1.3](https://click.palletsprojects.com/) - Click is a Python package for creating command-line interfaces (CLIs).
+    - [blinker==1.6.2](https://pypi.org/project/blinker/) - Blinker is a Python module that provides a fast dispatching system that allows code to subscribe to be notified when certain events occur
+    - [dnspython==2.3.0](https://www.dnspython.org/) - The itsdangerous library provides various ways to work with JSON Web Signatures (JWS), which are a way of signing a data structure in a way that cannot be easily tampered with.
 
 ##### back to [top](#table-of-contents)
 
@@ -214,39 +212,18 @@ In an ideal world, there are a couple items that I would've loved to have comple
 
 **Creating an Account**
 
-I've created my own personal account, along with the master *Admin* account. In addition to these two primary accounts, I've tested with about 20 fake accounts in order to confirm authentication and validation worked as expected.
+I've created my own personal account. In addition to these two primary accounts, I've tested with about 15 fake accounts in order to confirm authentication and validation worked as expected.
 
 **Add | Edit | Delete a Recipe**
 
-In addition to my personal recipes, I've created about 50 test recipes, mostly *Aaaaa*, *Bbbbb*, *Ccccc* in order to prepare for pagination building. These recipes were created using my actual account, the admin account, and several test accounts.
+In addition to a few choosen recipes, I've created about 10 test recipes, mostly *Test*, *Test123* etc in order to prepare for pagination building. These recipes were created using my actual account, the admin account, and several test accounts.
 
 For several recipes, I've edited minor things like the recipe description, adding additional ingredients or directions, to test the functionality of updating a recipe to the database.
 
-After successfully implementing pagination, I've deleted all of my test recipes. To properly test the admin functionality, I didn't delete all of the recipes as the test-user; several were deleted by the admin account.
 
 **Pagination**
 
 When implementing pagination, I had a lot of manual tests to undergo, in order to make pagination work for multiple scenarios. I needed to test that all aspects of pagination worked with and without the option for searching the database. These included:
-
-- **Pagination without Search**
-    - Pagination works if no URL args present on initial load.
-    - *Previous Page* button disabled on first page of all recipes shown.
-    - *Next Page* button disabled on last page of all recipes shown.
-    - Appropriate number of pages appear based on the initial 12 items per page with correct number of recipes in database.
-    - Additional page numbers appear if more recipes are added.
-    - Each page number returns their correct page URL.
-
-- **Pagination with Search**
-    - Pagination works if no URL args present on initial search.
-    - No pagination shown if 0 search results.
-    - No pagination shown if only 1 page of search results.
-    - No pagination shown if fewer results than user-selected items per page.
-    - No pagination shown if user selects *All* results to be displayed.
-    - *Previous Page* button disabled on first page of multi-page search results.
-    - *Next Page* button disabled on last page of multi-page search results.
-    - Appropriate number of pages appear based on user-selected items per page.
-    - Additional page numbers appear if more recipes are added.
-    - Each page number returns their correct page URL.
 
 **Sort, Order, and Limit**
 
@@ -256,9 +233,6 @@ With the Search function, the user has the option to sort, order, and limit the 
     - Sorting by *Author* or *Recipe Name* works accordingly:
         - ascending (alphabetical A-Z)
         - descending (alphabetical Z-A)
-    - Sorting by *Favorites* or *Views* works accordingly:
-        - ascending (lowest to highest)
-        - descending (highest to lowest)
     - Sorting by *Last Edited* works accordingly:
         - ascending (oldest to newest)
         - descending (newest to oldest)
@@ -266,74 +240,19 @@ With the Search function, the user has the option to sort, order, and limit the 
         - ascending (shortest to longest)
         - descending (longest to shortest)
 
-- **Limiting**
-    - Limit results by 8 | 12 | 16 | 20 recipes per page:
-        - Depending on number of results found, correct pagination for user-selected number of items to display.
-    - Show *All* results on single page:
-        - No matter how many results are found, if user selects *All*, it will show all results on a single page without Pagination.
-
-**Profile**
-
-As a **standard user**, there are four profile buttons.
-
-- *View your own submitted recipes*:
-    - If a user hasn't submitted anything yet, a cute quote is displayed to encourage the user to submit their own. As aforementioned, I've created and deleted several recipes to test this functionality works when logged in as any user.
-- *View recipes you've saved*:
-    - This can be the user's own recipes, or recipes submitted by other users. Again, if the user hasn't yet saved anything to their favorites, then a cute quote is displayed to encourage them to check out some of the delicious desserts that others have already submitted. I have saved and removed dozens of recipes in my test accounts and my live accounts in order to test this functionality works perfectly.
-- *Change your password*:
-    - Users can change their password, but will first need to validate their current password for authentication. Along with my test accounts, I constantly changed the passwords to ensure everything was successful.
-- *Delete account*:
-    - Users can delete their account entirely, and will need to confirm deletion by inputting their password for verification. A prompt is shown to warn the user that their submitted recipes and anything they've saved will also be removed permanently. When I was done testing with my test accounts, I deleted them using this function without any problems. Some of these were deleted using my admin account though, since admin can delete recipes and/or users where applicable.
-
-As the **Admin**, the first three buttons are identical to a standard user. The fourth button however, is purely for the admin profile, which can delete users if required. Some of the test accounts that I had were deleted by the admin account to test this functionality. It will find all recipes that the user submitted and remove them, pull any 'likes' on those recipes, find all recipes that the user saved and decrement their 'likes' by -1, and finally remove the user entirely from the database.
-
-**Printing a Recipe**
-
-Some people like to print things still, especially recipes that they may want to save in their kitchen cabinet (I speak from person experience as a baker). There's a lot of fluff built into the page that is purely for visual purposes, not needed for a printed recipe, which just wastes ink and paper. I tested numerous recipes and the print function, to ensure everything was being stripped out completely except the important things: **a)** the recipe title, **b)** the ingredients list, and **c)** the directions required.
-
-**Share a Recipe**
-
-I wanted to incorporate a way to share the recipe, without having any social media imbedded links, so *Copy to Clipboard* was implemented. This was tested on a lot of the recipes. Eventually I 'broke' the code by refactoring some elements later in the development stage, but due to the numerous testing I did after each commit, it was quickly found and fixed.
-
 
 ### Validators
 
 **HTML**
-- [W3C HTML Validator](https://validator.w3.org) - Unfortunately the W3C Validator for HTML does not understand the Jinja templating syntax, so it therefore shows a lot of errors with regards to `{{ variables }}`, `{% for %} {% endfor %}`, etc. Aside from the Jinja warnings and errors, all of the remaining code is perfectly validating. Also due to the Jinja templating, certain elements cannot be 'beautified' across multiple lines, and must remain on a single line. An example of this is the `<select>` element, which is rather long with specific Materialize classes, and Jinja templating.
+- [W3C HTML Validator](https://validator.w3.org) - I removed all Jinja coding from the html files and tested on that basis. The errors seen from the W3C checker all relate to erros caused by removing the Jinja code, e.g. expecting to see a doctype first, the head element is missing - all related to html elements that do not appear in any of the files apart from the base.html. Otherwise there were no errors in the html.
 
 **CSS**
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - I am using `:root{}` variables in my CSS, which isn't [yet?] recognized by the validator. This is causing several **Parsing Errors**, when in fact they are not errors, and work perfectly fine.
-- **Parse Error** *[ li)]* - for some reason, the validator does not recognize the `<li>` element in my `:not(#search_form li)` code, but everything else breaks that particular code, so I've left it alone.
-
-```css
-.collapsible-collection li:nth-child(odd):not(#search_form li) {
-    background-color: rgba(var(--purpleLight5), 0.75);
-}
-.collapsible-collection li:nth-child(even):not(#search_form li) {
-    background-color: rgba(var(--pinkLight5), 0.75);
-}
-```
-
-- **Same color for background-color and border-bottom-color** - The code below overrides the Materialize color for the checkbox animation effect, so the validator thinks this is an error, but is correct in order to override the color with my own.
-
-```css
-[type="radio"].with-gap:checked + span:after
-[type="radio"]:checked + span:after
-```
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - 
+- CSS code passed first time with no errors
 
 **JavaScript**
 - [JShint](https://jshint.com/)
-    - "There are **37** functions in this file.
-    Function with the largest signature take **0** arguments, while the median is **0**.
-    Largest function has **41** statements in it, while the median is **1**.
-    The most complex function has a cyclomatic complexity value of **10** while the median is **2**."
-    Two undefined variables:
-        - `$` (141 times - this is for jQuery)
-        - `M` (4 times - this is for Materialize)
-- [JSesprima](http://esprima.org/demo/validate.html)
-    - "Code is syntactically valid."
-- [Beautify Tools](http://beautifytools.com/javascript-validator.php)
-    - `M` is not defined. (4 times - for Materialize)
+   
 
 **Python**
 - [PEP8 Online](http://pep8online.com/)
@@ -347,7 +266,6 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 - Edge *v.18*
 - Firefox *v.67*
 - Safari *v.12*
-- Opera *v.56*
 - Internet Explorer *v.11*
 
 For testing compatibility, I created a testing matrix to test across multiple devices and browsers. The test matrix can be found [here](app/testing/test-matrix.png). A brief overview:
