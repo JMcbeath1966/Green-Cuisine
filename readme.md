@@ -1,8 +1,8 @@
-# [Green Cusinse](xxxx)
+# [Green Cusinse](https://green-cuisine.herokuapp.com/)
 
-![mockup](app/wireframes/mockups.png)
+[mockup]()
 
-Looking for something delicious for vegetarians or vegans? You've come to the right place! [Green Cusine](xxxx) 
+Looking for something delicious for vegetarians or vegans? You've come to the right place! [Green Cusine](https://green-cuisine.herokuapp.com/) 
 Vegetarian and Vegan recipes for 'Green' lovers! You'll find a variety of tasty dishes from other veggie fanatics, be able to create your own profile, add your own recipes and update these recipes if you need to!
 
 ---
