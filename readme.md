@@ -64,8 +64,8 @@ I recognise that this is not extensive market research but it the discussions ha
 
 - :white_check_mark: *view the site* from **any device** *(mobile, tablet, desktop)*.
 - :white_check_mark: *view all recipes* as a **Guest**.
-- :white_check_mark: *filter recipes* by **dessert type**.
-- :white_check_mark: *filter recipes* by **allergen**.
+- :white_check_mark: *search all recipes* as a **Guest**.
+- :white_check_mark: *filter recipes* by **recipe type - vegan/vegetarian**.
 - :white_check_mark: *sort/order recipes* by **recipe title, description, ingredients, cooking time, and cuisine**.
 - :white_check_mark: *create* my **own profile**.
 - :white_check_mark: *add* my **own recipes**.
@@ -73,7 +73,6 @@ I recognise that this is not extensive market research but it the discussions ha
 - :white_check_mark: *delete* my **own recipes**.
 - :white_check_mark: be able to **log out**.
 - :white_check_mark: be able to **change my password**.
-- :white_check_mark: be able to **delete my account**.
 
 ### Design
 
