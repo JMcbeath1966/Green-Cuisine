@@ -56,3 +56,11 @@ a {
 .card {
   height: auto !important;
 }
+a {
+  font-size: 22px;  /* Change this to desired size */
+}
+@media screen and (max-width: 600px) {
+  .icon-class {
+    display: none;
+  }
+}
