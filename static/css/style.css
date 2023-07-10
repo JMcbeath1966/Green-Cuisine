@@ -29,7 +29,8 @@ footer {
   margin-bottom: 10px;
 }
 .footer-icons i {
-  margin: 0 10px;
+  margin: 0 5px;
+  font-size: 1.6rem !important
 }
 .footer-link {
   display: flex;
@@ -57,10 +58,36 @@ a {
   height: auto !important;
 }
 a {
-  font-size: 22px;  /* Change this to desired size */
+  font-size: 22px; 
 }
 @media screen and (max-width: 600px) {
-  .icon-class {
-    display: none;
+  nav .brand-logo{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  i.fa-regular {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  a {
+  font-size: 15px;
+  color: white;
+  }
+}
+@media (max-width: 469px) {
+  .row.valign-wrapper.center-align {
+    flex-direction: column;
+  }
+  
+  .input-field.col.s12.m8 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-type-label {
+    font-size: 8px;
   }
 }
