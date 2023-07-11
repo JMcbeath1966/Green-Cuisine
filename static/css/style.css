@@ -87,7 +87,7 @@ a {
     margin-bottom: 10px;
   }
   
-  .recipe-type-label {
-    font-size: 8px;
+  .select-wrapper {
+    font-size: 5px !important;
   }
 }
