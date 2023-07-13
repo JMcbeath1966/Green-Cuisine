@@ -30,16 +30,18 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-* [home.html]() - Passed.
-* [register.html]() - Passed
-* [login.html]() - Passed.
-* [profile.html]() - Passed.
-* [add_recipe.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/addrecipe-test-page.png) - Passed.
-* [all_recipe.html]() - Passed.
-* [edit_recipe.html]() - Passed.
-* [base.html]() - Passed.
+- I removed all Jinja coding from the html files and tested on that basis. The errors seen from the W3C checker all relate to erros caused by removing the Jinja code, e.g. expecting to see a doctype first, the head element is missing - all related to html elements that do not appear in any of the files apart from the base.html. Otherwise there were no errors in the html.
 
-* [style.css]() - Passed.
+* [home.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/home-page-test.png) - Passed.
+* [register.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/register-page-test.png) - Passed
+* [login.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/login-page-test.png) - Passed.
+* [profile.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/profile-page-test.png) - Passed.
+* [add_recipe.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/addrecipe-test-page.png)Passed.
+* [all_recipe.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/allrecipe-page-test.png) - Passed.
+* [edit_recipe.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/editrecipe-page-test.png) - Passed.
+* [base.html](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/base-page-test.png) - Passed.
+
+* [style.css](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/css-stylesheet-testpass.png) - Passed.
 
 - - -
 
@@ -47,43 +49,20 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-* [javascript.js](testing/jshint/jshint-javascript.png) - Passed.
-* [game.js](testing/jshint/jshint-game.png) - Passed with one warning. Async functions are only available in ES8. It also stated that there are 4 unused variables, however these are being used.
-* [highscores.js](testing/jshint/jshint-highscores.png) - Passed.
+* [javascript.js](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/jshint-test.png) - Passed.
+
 
 - - -
 
-### Lighthouse
+### Lighthouse Results
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
-### Desktop Results
+* [Lighthouse]()
 
-All pages of the site are achieving a score of 100 across the 4 categories.
 
-![index.html](testing/lighthouse/lighthouse-desktop-index.webp)
 
-![game.html](testing/lighthouse/lighthouse-desktop-game.webp)
 
-![highscores.html](testing/lighthouse/lighthouse-desktop-highscores.webp)
-
-![404.html](testing/lighthouse/lighthouse-desktop-404.webp)
-
-![500.html](testing/lighthouse/lighthouse-desktop-500.png)
-
-### Mobile Results
-
-Each page is achieving a score of 100 for the last three categories. The performance category is achieving a score of 98 for the first three pages and a score of 99 on the 404 & 500 page.
-
-![index.html](testing/lighthouse/lighthouse-mobile-index.webp)
-
-![game.html](testing/lighthouse/lighthouse-mobile-game.webp)
-
-![highscores.html](testing/lighthouse/lighthouse-mobile-highscores.webp)
-
-![404.html](testing/lighthouse/lighthouse-mobile-404.webp)
-
-![500.html](testing/lighthouse/lighthouse-mobile-500.png)
 
 - - -
 
