@@ -49,7 +49,7 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-* [javascript.js](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/html-css-test-results/jshint-test.png) - Passed.
+* [javascript.js](static/images/lighthouse-seo-results/Lighthouse Report Viewer.html) - Passed.
 
 
 - - -
@@ -58,7 +58,7 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
-* [Lighthouse]()
+* [lighthouse seo](static/images/lighthouse-seo-results/lighthouse-seo.results.html)
 
 
 
