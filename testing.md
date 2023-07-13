@@ -58,7 +58,7 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
-* [lighthouse seo](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/lighthouse-seo.results.html)
+* [lighthouse seo]()
 
 
 
