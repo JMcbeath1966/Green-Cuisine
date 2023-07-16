@@ -173,14 +173,16 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Filter recipe button | On click the the filter recipe button will then sort recipes by the choosen option and display them in the accodion | User tested with recipes adding as expected | Filter works as expected | Pass |
 | Display Edit button | Recipes can be edited in a rendered edit page on click of the edit button | Under manual testing the functionality works successfully | On click the user button renders to the new page successfully | Pass |
 | Display Delete button | Recipes can be deleted on click of the delete button | Under manual testing the functionality works successfully | The funtionality works as expected| Pass |
+| Dropdown "accordion" to display full recipe | On down arrow click, the full recipe will open and collapse | Dropdown worked on manual testing | Accordion opens and closes as expected| Pass |
 
 `Edit Recipe Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Amend recipe details in the input field|||| Pass |
+| Note * Edit page opens from the All Recipes page. In the Edit page,  users can amend recipe details in the Edit Page| Users amend input fields  | Manually tested, users can easily amend details prior to next action | Input fields are successfully entered | Pass |
+ | Edit Recipe button/ Flash message | A user clicks on the edit recipe button and the amendments pass to the database. On click a message - "Recipe edited Successfully displays| Tested MongoDB to check the details have updated correclty and manually tested the menus have correctly updated| Edit Recipe updates inputs succesfully and flash message appears | Pass |
+ |Cancel button | On click the user will go back to the All Recipe page | Manually tested, the user returns to the page| Functionality works | Pass |
 
 `Log Out Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-||||||
-
+|Log out with flash message to confirm a user has logged out | The user logs out and the message "You have been logged out" displays | Manually tested only | The log out and return to the login page with the flash message is successful | Pass |
