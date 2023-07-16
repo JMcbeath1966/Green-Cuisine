@@ -177,7 +177,7 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 `Edit Recipe Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Edit |||| Pass |
+| Amend recipe details in the input field|||| Pass |
 
 `Log Out Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
