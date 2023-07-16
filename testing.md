@@ -186,3 +186,17 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 |Log out with flash message to confirm a user has logged out | The user logs out and the message "You have been logged out" displays | Manually tested only | The log out and return to the login page with the flash message is successful | Pass |
+
+### Bugs and Fixes
+
+Significant bugs were recorded as the project progressed and are detailed below:
+
+`Bug`
+| Bug  | Fix  | Resouces Used |
+| --- | --- | --- |
+| In my site footer from the Materialize site, the underline was not appearing on the a link and I wanted it to display, to be more prominent that a link had be clicked on to and improve user experience |I went back to my milestone 2 project where I had encountered a similar issue, reviewed the code and amended the css sheet to show: text-decoration: underline; | Milestone 2 project |
+| Jinja error stating Undefined error. 'register' is undefined.| I traced the error and found I had missed the single quotes around the register variable. I compared the code to my github task_manager project to confirm the issue | GitHub and Code Insitute tutorial |
+|Jinja error: Template not found | I used the error message to traceback to the issue and eventually found I'd missed quotes around the categories and added them in to resolve the error| Self review and Chat GPT |
+| Jinja error: Template Syntax Error | After seeking tutoring support I realised I did not understand that my code was not reflecting the tables in MongoDB, and to be honest I had not understood the concepts stongly enough, so I asked the tutor support to overview the process for building an all_recipes function. My issue started with trying to get a quick fix by 'dumping' code from a tutorial and using that. It was the only time I did it and delayed my project, so lesson learned. I rectified the issue by going back over the code to identify the routes required for the POST and GET requests. Then reviewed the query for the database (and it's conversion to a cursor object, corrected the templates which was a naming issue which i quickly corrrected ) | Support from the Code Insitutue support and review of the key sections of building routes, database (naming functions to reflect the tables) |
+| When trying to login with my original username/password it didn't work | On manually testing the site and checking code I realised I had my register and login template url's were back to front | Self review of code and website|
+| Dropdowns/Options/Forms not working | I encountered this a few times but, in essence I was forgetting to add the required Javascript into the html templates which led to nothing happening when clicking on dropdown menu's| Self review of code and tutor support (once)|
