@@ -158,10 +158,6 @@ For my wireframes, I have used [Balsamiq Wireframes](https://balsamiq.com/) for 
 **Remove a Recipe from Favorites**
 - If a user no longer likes a recipe, or simply wants to remove it from their favorites, a single click can remove a recipe.
 
-**Admin Superuser**
-- My ***'Admin'*** profile has several extra features, which currently include:
-    - Edit / Delete any recipe from the database.
-
 ### Features Left to Implement
 
 **Admin Superuser**
@@ -216,9 +212,9 @@ I've created my own personal account. In addition to these two primary accounts,
 
 **Add | Edit | Delete a Recipe**
 
-In addition to a few choosen recipes, I've created about 10 test recipes, mostly *Test*, *Test123* etc in order to prepare for pagination building. These recipes were created using my actual account, the admin account, and several test accounts.
+In addition to a few choosen recipes, I've created about 10 test recipes, mostly *Test*, *Test123* etc in order to prepare for pagination building. These recipes were created using my actual account and several test accounts.
 
-For several recipes, I've edited minor things like the recipe description, adding additional ingredients or directions, to test the functionality of updating a recipe to the database.
+For several recipes, I've edited minor things like the recipe description, adding additional ingredients or time to cook, to test the functionality of updating a recipe to the database.
 
 
 **Pagination**

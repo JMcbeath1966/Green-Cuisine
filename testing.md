@@ -51,6 +51,9 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 * [javascript.js](static/images/lighthouse-seo-results/Lighthouse Report Viewer.html) - Passed.
 
+**Python**
+- [PEP8 Online](http://pep8online.com/)
+    - pycodestyle was used in the CLI to test compliance to pep8 and the file test 'threw' no errors
 
 - - -
 
@@ -58,7 +61,13 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
-* [lighthouse seo]()
+* [Overall results](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/seo-overall-results.png)
+* [Opportunities report](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/opportunities-report.png)
+* [Opportunities resport 2](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/opportunities-report-cont.png)
+* [Seo page results](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/seo-report.png)
+* [Best practice report](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/best-practice-report.png)
+* [Accesibility report](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/accessibility-report.png)
+* [PWA commentary](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/lighthouse-seo-results/pwa-commentary.png)
 
 
 
@@ -70,26 +79,28 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 
 ### Testing User Stories
 
-`First Time Visitors`
+* Due to time constraints the testing was conducted within my family - my wife, 4 daughters and my son! The devices used are detailed in the Full Testing section of this document
 
-| Goals | How are they achieved? |
-| :--- | :--- |
-| I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere. | The Quiz Arms pulls general knowledge quiz questions from a large variety of topics, much like a pub quiz would do. The site is available for use whenever is convenient to the user. |
-| I want the site to be responsive to my device. | I have developed the site with responsiveness in mind. |
-| I want the site to be easy to navigate. | Buttons are used throughout the site for navigation, much like a mobile app. As the site is like a mobile app - I decided that I didn't want to add a navigation bar or footer, as these would make the site look more like a traditional webpage. The page title also acts as a link to the home page.  |
+They were asked to look at the following criteria from the readme and comment on the requirements outlined, namely:
 
-`Returning Visitors`
+- :white_check_mark: *view the site* from **any device** *(mobile, tablet, desktop)*.
+- :white_check_mark: *view all recipes* as a **Guest**.
+- :white_check_mark: *search all recipes* as a **Guest**.
+- :white_check_mark: *filter recipes* by **recipe type - vegan/vegetarian**.
+- :white_check_mark: *sort/order recipes* by **recipe title, description, ingredients, cooking time, and cuisine**.
+- :white_check_mark: *create* my **own profile**.
+- :white_check_mark: *add* my **own recipes**.
+- :white_check_mark: *edit* my **own recipes**.
+- :white_check_mark: *delete* my **own recipes**.
+- :white_check_mark: be able to **log out**.
+- :white_check_mark: be able to **change my password**.
 
-|  Goals | How are they achieved? |
-| :--- | :--- |
-| I want to be able to choose a level of difficulty that I feel is appropriate for me, based on my experience from my first visit to the site. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
+They reported responsiveness issues at screen sizes between 600px, down to 400px on tablet/mobile devices. 
+These were:
+- Salad icon moving out of alignment in header
+- Text and links became more difficult to read at small screen size
+- The color of the link became very difficult to see at small screen size
 
-`Frequent Visitors`
-
-| Goals | How are they achieved? |
-| :--- | :--- |
-| I want to be able to adjust the difficulty level to keep improving my knowledge. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
-| I want to be able to log my high scores to see how I am performing. | Users of the site are able to log their high scores to the high scores page. The top ten results will be displayed. |
 
 - - -
 
@@ -98,108 +109,78 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 Full testing was performed on the following devices:
 
 * Laptop:
-  * Macbook Pro 2021 14 inch screen
+  * Macbook Pro 2021 15 inch screen
 * Mobile Devices:
   * iPhone 13 pro.
-  * iPhone 11 pro.
-  * Phone X.
+  * iPhone 10 
+  * iPhone X.
+  * Kindle Fire.
 
 Each device tested the site using the following browsers:
 
 * Google Chrome
 * Safari
 * Firefox
+* Edge
 
-Additional testing was taken by friends and family on a variety of devices and screen sizes. They reported no issues when playing.
-
-One tester in peer code review stated that the bottom of the play screen was cut off when testing on an iphone SE (2nd gen). I was unable to replicate this issue using google chrome developer tools.
 
 `Home Page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| How to play button | Displays the modal with the instructions on how to play the game | Clicked on button | Modal with instructions on how to play opens | Pass |
-| Modal close button | Closes the modal | Clicked on close button | Modal closed | Pass |
-| Play Button | Directs the user to the game page | Clicked on button | Game page opens to display the difficulty selections | Pass |
-| High Scores Button | Directs the user to the high scores page | Clicked on button | Directs to the high scores page | Pass |
-| All buttons - hover effect | All black buttons with white text should change to white with black text when hovered over. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
+| The sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| The site nav-brand | The page links to the home page | Clicked on nav-brand icon | Home page reloads | Pass |
+| Navbar displays Home/Login/Register only | Navbar will add additonal pages | Clicked on close button | Screen refreshes smoothy to home page | Pass |
+| Footer links | Open 3 external websites open to a new tabs| clicked on each link and open new tab for website | All links opened to new tabs | Pass | 
 
-`Game Page - Difficulty Selection`
+`Register Page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Sites title | Link directs the user back to the home page | Clicked title | Directed back to home page | Pass |
-| All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-| Easy Button | Calls the easy quiz URL for the API | By console logging the data called from the API I was able to check the difficulty level of the questions corresponded with the level called | ![data-console.log-easy](testing/data-consolelog-easy.png) | Pass |
-| Medium Button | Calls the medium quiz URL for the API | By console logging the data called from the API I was able to check the difficulty level of the questions corresponded with the level called | ![data-console.log-medium](testing/data-consolelog-medium.png) | Pass |
-| Hard Button | Calls the hard quiz URL for the API | By console logging the data called from the API I was able to check the difficulty level of the questions corresponded with the level called | ![data-console.log-hard](testing/data-consolelog-hard.png) | Pass |
+|Register Below | User will be able to register username and a password by clicking on a register button | Once the register button is clicked a message will appear saying "Registration Successful and display the users profile name in username/profile format| On clicking the registration button both the message and username/profile details appear | Pass | 
+| Username exists message | If your username exists a flash message saying "Username already exists - Please use a different name! | Various existing usernames were tested with the message appearing every time | Pass |
+|Message below registration container to allow a user to login if already registered. This will be quicker to use than going back to the nav-bar to click on register again | The user will access see both a message (Already Registered?) | Login button tested and it takes the user to the login page| Pass |
 
-`Game Page - Quiz Area`
+
+`Login Page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Sites title | Link directs the user back to the home page | Clicked title | directed back to home page | Pass |
-| All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-| Question populated | The question from the API is correctly pulled from the JSON data | console.log the data and check that the question has been pulled correctly | The question is displaying | Pass |
-| Answers populated | The answers from the API are correctly pulled from the JSON data | console.log the data and check that the answers have been pulled correctly | The answers are displaying | Pass |
-| Data attribute correct | The data attribute correct has been applied to the correct answer | By console logging the data I am able to check what the correct answer should be. I can then console.log the id of the buttons to check whether the data attribute has been applied only to the button containing the correct answer | only the correct answer has the correct attribute | Pass |
-| Correct answer - border colour | When a correct answer is clicked the border around the game area should display green | Clicked on a correct answer | Border displayed green | Pass |
-| Incorrect answer - border colour | When an incorrect answer is clicked the border around the game area should display red | Clicked incorrect answer | Border displayed red | Pass |
-| Correct answer - button colour | When a correct answer is clicked the button should change background colour to green | Clicked a correct answer | Button background turned green | Pass |
-| Incorrect answer - button colour | When an incorrect answer is clicked the clicked buttons background should turn red | Clicked incorrect answer | Button background turned red | Pass |
-| Incorrect answer - display correct answer | When an incorrect answer is clicked, the correct answer should display a green background | Clicked incorrect answer | The correct answer turned green | Pass |
-| Question No counter | The Question No counter should start at 1 and increase by 1 time the next button is selected. | answered questions and clicked next button | Each time the next button is clicked the Answer no counter increases by 1. | Pass |
-| Score Counter | The score counter should begin at 0. Each time a correct answer is selected the score should increase by 10. If an incorrect answer is selected the score should remain the same | Clicked a correct answer to check if the score increased. Clicked an incorrect answer to check the score stayed the same| When a correct answer was selected the score increased by 10. When an incorrect score was selected the score stayed the same | Pass |
-| Not Allowed Cursor | Once an answer has been selected, the answer buttons should then be disabled and when hovered over the not allowed cursor will display | Clicked on one answer button and then clicked on the remaining answer buttons | After the answer was selected each answer button clicked on subsequently displayed the not allowed cursor | Pass |
-| Next button - becomes visible | When an answer is clicked the next button should be displayed so the user can progress to the next question, or to the end section if all 15 questions have been answered| Clicked on an answer button | The next button displayed | Pass |
-| Next button hover effect | A button with a white background & black text should change to a button with a black background & white text when hovered over.| Hovered over the button | Style changed as expected | Pass |
-| Next button - clicked | When clicked all answer styles should be removed, the next button should become hidden again and a new question and answer loaded if there are questions left. If all questions have been answered the end game should appear | Clicked on the next button | All styles were removed and a new question and answers were displayed. After question 15 was answered I was taken to the end game. | Pass |
+|On successfull login, profile page appears | Profile page displays with message to welcome user and the username profile| Tested with multiple usernames on login| Welcome message and username profile display successfully | Pass | 
+|Unsuccessful login message | Due to defensive programming the login will be unsuccessul if the details entered do not match the criteria to login | I tested the defensive programmes parameters (e.g. No data entered, specific length of password etc) | Testing the defensive programs was carried out on different login accounts and was successful for the parameters used for the site | Pass |
 
-`Game Page - End of Quiz`
+
+`Profile Page`
+Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|On successfull login, profile page appears | Profile page displays with message to welcome user and the username profile| Tested with multiple usernames on login| Welcome message and username profile display successfully | Pass | 
+| Nav-bar to display liks for additional pages and Login is removed from nav-bar display | Add Recipes, All Recipes and Log Out pages will be added to Home and Profile pages | Profile page shows correct pages in the nav-bar | When profile is displayed, Home/Profile/Add Recipe/All Recipes/ all appear in the nav-bar. Login is removed | Pass |
+
+
+`Add Recipe Page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-| Score Display | The Your Score area should populate with the score you have achieved | I added my score as I played, checked the score on the last question & compared to the score displayed | The score displays correctly | Pass |
-| Submit Button - enabled/disabled | The submit button should be disabled and show the not allowed cursor by default. Once the user types their team name into the input field the button is enabled | I hovered over and clicked the submit button without filling in the team name field. I then added a team name, hovered over and clicked the submit button | Without a team name filled in the cursor displays as not allowed and the button will not submit. Once I filled in a team name the cursor became a 🍺 when hovered over the button and I was able to click and submit the score | Pass |
-| Submit button - on submit | Once clicked the submit button will redirect you to the high scores page | Clicked the button with the team name filled in | Redirected to the high scores page | Pass |
-| Play again? button | Clicking on this button will return you to the start of the game page where you can select a quiz difficulty level | Clicked on the play again? button | Directed to the beginning of the game to select a difficulty level | Pass |
-| Home button | Clicking on this button will take you back to the home page | Clicked the home button | Directed back to the home page | Pass |
+| Six input areas display, one of the inputs being a dropdown modal | Inputs will be allowed up to the charachter lilmits set| All input fields were tested against charachter lengths by users | There were no issues |Pass |
+| Add Recipe Button | On click, the All Recipe page will render with a flash message updating the user "Recipe added Successfully" | Tested MongoDB to ensure data is added and manually tested | The All Recipe page renders correctly with the flash message | Pass |
+| Add Recipe Button | On click, the All Recipe page will render with the recipe added to the accordion dropdown with the recipe type and short description added" | Tested MongoDB to ensure data is added and manually tested | The All Recipe page renders correctly with the recipe type and description displayed | Pass |
 
-`High Scores Page`
-
+`All Recipes Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-| Score Displayed | If your score is in the top ten, your team name and score will be displayed in the high scores area in descending order | Played 11+ games and logged a variety of scores. | Once 10 scores were displayed on the high scores board, only scores that were better than the ones logged would then be added to the board | Pass |
-| Play again? button | Takes the user to the beginning of the game page to select a difficulty level | Clicked the button | Taken to the beginning of the game page to select a difficulty level | Pass |
-| Home button | Takes the user to the home page | Clicked the button | Taken to the home page | Pass |
+| Search Recipe bar | Users can search by keywords but must have minimum 3 charachters and the field must be entered - a modal message to enter more than 3 charachters should pop up. If nothing is entered then a modal pop up asking the user to fill in the field appears | The charachter and required requirements were tested manually | The functionality was tested manually and everything worked as expected | Pass |
+| Filter/Sort by Recipe type| On click in the sort area or the dropdown arrow, the user can choose their recipe type, prior to using the filter recipe button | Functionality for both sort area and dropdown work as expected | Funcionality worked as expected under user test| Pass|
+| Filter recipe button | On click the the filter recipe button will then sort recipes by the choosen option and display them in the accodion | User tested with recipes adding as expected | Filter works as expected | Pass |
+| Display Edit button | Recipes can be edited in a rendered edit page on click of the edit button | Under manual testing the functionality works successfully | On click the user button renders to the new page successfully | Pass |
+| Display Delete button | Recipes can be deleted on click of the delete button | Under manual testing the functionality works successfully | The funtionality works as expected| Pass |
 
-`404 Error Page`
-
+`Edit Recipe Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-| Go home button | Takes the user back to the home page | Clicked the button | Taken to the home page | Pass |
-| Play button | Takes the user to the beginning of the game page | Clicked the button | Taken to the beginning of the game page to choose a difficulty level | Pass|
-| View high Scores button | Takes the user to the high scores page | Clicked the button | Taken to the high scores page | Pass |
+| Edit |||| Pass |
 
-`500 Error Page`
-
+`Log Out Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-| Go home button | Takes the user back to the home page | Clicked the button | Taken to the home page | Pass |
-| View high Scores button | Takes the user to the high scores page | Clicked the button | Taken to the high scores page | Pass |
+||||||
+
