@@ -43,6 +43,9 @@ a {
   color: #ea6983;
   text-decoration: none;
 }
+a:hover{
+  color: whitesmoke;
+}
 .btn-small {
   margin: 7px;
 }
