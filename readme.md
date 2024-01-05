@@ -290,33 +290,7 @@ Next, there's a series of steps to take in order to proceed with local deploymen
 
 **CATEGORIES**
 
-- Data Model for MongoDB ![Here]https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/recipe_site_data_model.pdf
-
-```
-_id: <ObjectId>
-recipe_type: <array>
-```
-
-**RECIPES**
-```
-_id: <ObjectId>
-recipe_title: <string>
-recipe_description: <string>
-recipe_ingredients: <string>
-cooking_instructions: <string>
-cooking_time: <string>
-recipe_type: <string>
-```
-
-**USER**
-```
-username:  <string>
-```
-
-
-- You should now be able to launch your app using the following command in your terminal:
-    - `flask run`
-- The app should now be running on *localhost* on an address similar to `http://127.0.0.1:5000`. Simply copy/paste this into the browser of your choice!
+- Data Model for MongoDB ![Here](https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/recipe_data_model.jpeg)
 
 ### Remote Deployment
 
