@@ -289,6 +289,9 @@ Next, there's a series of steps to take in order to proceed with local deploymen
 - Sign up for a free account on [MongoDB](https://www.mongodb.com) and create a new Database called **Green-Cusine**. The *Collections* in that database should be as follows:
 
 **CATEGORIES**
+
+- Data Model for MongoDB ![Here]https://github.com/JMcbeath1966/Green-Cuisine/blob/main/static/images/recipe_site_data_model.pdf
+
 ```
 _id: <ObjectId>
 recipe_type: <array>
