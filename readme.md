@@ -257,8 +257,7 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 - Safari *v.12*
 - Internet Explorer *v.11*
 
-For testing compatibility, I created a testing matrix to test across multiple devices and browsers. The test matrix can be found [here](app/testing/test-matrix.png). A brief overview:
-
+The testing was done manually, by myself and family members.
 
 ### Known Issues
 
