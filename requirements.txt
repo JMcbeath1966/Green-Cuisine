@@ -6,3 +6,4 @@ Flask-PyMongo==2.3.0
 itsdangerous==2.1.2
 pymongo==4.3.3
 Werkzeug==3.0.1
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
